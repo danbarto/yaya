@@ -6,12 +6,15 @@ import ROOT
 
 types = ['TCanvas', 'TGraph', 'TH2D', 'TH2F', 'TH1D', 'TH1F']
 
-class reader:
+class rootReader:
     def __init__(self, file):
         self.file = file
-        self.graphs = []
-        self.hist2D = []
-        self.hist1D = []
+        self.graphs     = []
+        self.hist2D     = []
+        self.hist1D     = []
+        self.canvasList = []
+        self.boxes      = []
+        self.errors     = []
 
     def open(self):
         self.rootFile = ROOT.TFile(self.file)
@@ -24,14 +27,16 @@ class reader:
         ''' should be more elaborate. try - except?
         '''
         k = self.rootFile.GetListOfKeys()
-        self.canvasList = [ self.rootFile.Get(a.GetName()) for a in k ]
+        return [ self.rootFile.Get(a.GetName()) for a in k ]
+        #self.canvasList += [ self.rootFile.Get(a.GetName()) for a in k ]
 
-    def getFromCanvas(self):
-        for c in self.canvasList:
+    def getFromCanvas(self, canvasList):
+        self.canvasList += canvasList
+        for c in canvasList:
             objs = c.GetListOfPrimitives()
             self.getFromPrimitiveList(objs)
 
-    def getFromPrimitiveList(self, objs)
+    def getFromPrimitiveList(self, objs):
         for o in objs:
             className = o.ClassName()
             if className == 'TGraph':
@@ -40,11 +45,19 @@ class reader:
                 self.hist2D.append(o)
             elif className == 'TH1D' or className == 'TH1F':
                 self.hist1D.append(o)
-            elif className == 'TList' or className == 'TPad':
-                pass 
+            elif className == 'TBox':
+                self.boxes.append(o)
+            elif className == 'TGraphAsymmErrors':
+                self.errors.append(o)
+            elif className == 'TList':
+                self.getFromPrimitiveList(o)
+            elif className == 'TPad':
+                self.getFromCanvas([o])
             else:
                 continue
 
-    '''
-    need iterative/recursive function that steps through all lists/pads until at the last layer
-    '''
+    def walk(self):
+        self.open()
+        firstCanvas = self.getObjects()
+        self.getFromCanvas(firstCanvas)
+        self.close()
