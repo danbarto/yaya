@@ -1,0 +1,157 @@
+
+independent_variables:
+- header: {name: Region, units: 'a.u.'}
+  values:
+  - {low: 0.0, high: 1.0}
+  - {low: 1.0, high: 2.0}
+  - {low: 2.0, high: 3.0}
+  - {low: 3.0, high: 4.0}
+  - {low: 4.0, high: 5.0}
+  - {low: 5.0, high: 6.0}
+  - {low: 6.0, high: 7.0}
+  - {low: 7.0, high: 8.0}
+  - {low: 8.0, high: 9.0}
+  - {low: 9.0, high: 10.0}
+  - {low: 10.0, high: 11.0}
+  - {low: 11.0, high: 12.0}
+  - {low: 12.0, high: 13.0}
+
+dependent_variables:
+- header: {name: 'Drell-Yan', units: count}
+  values:
+  - value: 500.13
+  - value: 4.78
+  - value: 19.53
+  - value: 0.32
+  - value: 0.37
+  - value: 0.18
+  - value: 156.21
+  - value: 9.10
+  - value: 16.38
+  - value: 1.50
+  - value: 0.77
+  - value: 1.13
+  - value: 18.66
+
+- header: {name: Multiboson, units: count}
+  values:
+  - value: 52.62
+  - value: 3.27
+  - value: 34.52
+  - value: 6.81
+  - value: 0.15
+  - value: 5.74
+  - value: 20.22
+  - value: 4.82
+  - value: 25.10
+  - value: 12.80
+  - value: 0.46
+  - value: 17.73
+  - value: 19.87
+
+- header: {name: 'ttbar/single t', units: count}
+  values:
+  - value: 15.96
+  - value: 0.35
+  - value: 5.01
+  - value: 0.33
+  - value: 0.05
+  - value: 0.04
+  - value: 0.14
+  - value: 0.21
+  - value: 0.00
+  - value: 0.00
+  - value: 0.00
+  - value: 0.00
+  - value: 0.05
+
+- header: {name: ttZ, units: count}
+  values:
+  - value: 2.22
+  - value: 0.10
+  - value: 1.17
+  - value: 0.16
+  - value: 0.03
+  - value: 0.11
+  - value: 0.91
+  - value: 0.30
+  - value: 1.57
+  - value: 0.35
+  - value: 0.19
+  - value: 0.64
+  - value: 0.96
+
+- header: {name: Other, units: count}
+  values:
+  - value: 1.20
+  - value: 0.09
+  - value: 0.66
+  - value: 0.11
+  - value: 0.02
+  - value: 0.06
+  - value: 0.47
+  - value: 0.11
+  - value: 0.48
+  - value: 0.14
+  - value: 0.03
+  - value: 0.13
+  - value: 0.32
+
+- header: {name: Total Background, units: count}
+  values:
+  - value: 572.13
+    errors:
+    - {symerror: 80.45, label: total}
+  - value: 8.59
+    errors:
+    - {symerror: 3.45, label: total}
+  - value: 60.89
+    errors:
+    - {symerror: 5.37, label: total}
+  - value: 7.73
+    errors:
+    - {symerror: 1.02, label: total}
+  - value: 0.63
+    errors:
+    - {symerror: 0.18, label: total}
+  - value: 6.13
+    errors:
+    - {symerror: 1.02, label: total}
+  - value: 177.94
+    errors:
+    - {symerror: 19.62, label: total}
+  - value: 14.54
+    errors:
+    - {symerror: 1.38, label: total}
+  - value: 43.52
+    errors:
+    - {symerror: 3.56, label: total}
+  - value: 14.80
+    errors:
+    - {symerror: 1.56, label: total}
+  - value: 1.44
+    errors:
+    - {symerror: 0.45, label: total}
+  - value: 19.63
+    errors:
+    - {symerror: 2.08, label: total}
+  - value: 39.86
+    errors:
+    - {symerror: 3.40, label: total}
+
+- header: {name: Data, units: count}
+  values:
+  - value: 576.00
+  - value: 7.00
+  - value: 53.00
+  - value: 6.00
+  - value: 3.00
+  - value: 9.00
+  - value: 169.00
+  - value: 15.00
+  - value: 67.00
+  - value: 16.00
+  - value: 3.00
+  - value: 11.00
+  - value: 31.00
+

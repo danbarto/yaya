@@ -97,4 +97,45 @@ keywords: # used for searching, possibly multiple values for each keyword
   - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
 data_file: Fig5c.yaml
 
+---
+name: "Figure 6"
+location: Data from Figure 6 of publication
+description: Event yields in the 13 Drell-Yan and multiboson control regions for events with SF leptons falling within the Z boson mass window and no b jets, after renormalizing with the scale factors obtained from the fit procedure described in the text.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [region]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig6.yaml
+
+---
+name: "Figure 7a"
+location: Data from Figure 7 (left) of publication
+description: Distributions of MT2(ll) for observed events in the dimuon channel compared to the predicted SM background.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [MT2ll]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig7a.yaml
+
+---
+name: "Figure 7b"
+location: Data from Figure 7 (center) of publication
+description: Distributions of MT2(ll) for observed events in the dielectron channel compared to the predicted SM background.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [MT2ll]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig7b.yaml
+
+---
+name: "Figure 7c"
+location: Data from Figure 7 (right) of publication
+description: Distributions of MT2(ll) for observed events in the electron-muon channel compared to the predicted SM background.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [MT2ll]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig7c.yaml
+
+
 # This is Table 2.

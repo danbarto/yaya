@@ -32,7 +32,7 @@ class read1DHist:
             s += "\n  - {low: %s, high: %s}"%x
         print s
 
-    def getDependent(self, name=False, units="1"):
+    def getDependent(self, name=False, units="count"):
         name = name if name else self.name
         s = '- header: {name: %s, units: %s}\n  values:'%(name, units)
         for i,y in enumerate(self.content):#sorted(self.content.keys()):
