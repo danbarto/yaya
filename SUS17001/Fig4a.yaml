@@ -1,0 +1,36 @@
+
+independent_variables:
+- header: {name: region, units: '1'}
+  values:
+  - {low: 0.0, high: 1.0}
+  - {low: 1.0, high: 2.0}
+  - {low: 2.0, high: 3.0}
+  - {low: 3.0, high: 4.0}
+  - {low: 4.0, high: 5.0}
+
+dependent_variables:
+- header: {name: Total Background, units: count}
+  values:
+  - value: 12.51
+    errors:
+    - {symerror: 1.84, label: total}
+  - value: 72.06
+    errors:
+    - {symerror: 10.29, label: total}
+  - value: 21.29
+    errors:
+    - {symerror: 3.62, label: total}
+  - value: 62.13
+    errors:
+    - {symerror: 10.95, label: total}
+  - value: 33.68
+    errors:
+    - {symerror: 7.12, label: total}
+
+- header: {name: Data, units: count}
+  values:
+  - value: 24.00
+  - value: 83.00
+  - value: 36.00
+  - value: 58.00
+  - value: 42.00

@@ -1,0 +1,100 @@
+# Start a new submission. This section is optional for the provision of information about the overall submission.
+---
+
+additional_resources: # additional references (e.g. experiment TWiki page for analysis)
+  - {location: "http://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-17-001/index.html", description: "web page with auxiliary material"}
+
+# add event selection and short discription here
+
+comment: | # Information that applies to all data tables.
+  CERN-LHC.  Search for top squarks and dark matter particles in opposite-charge dilepton final states at sqrt(s) = 13 TeV
+
+---
+# Start of table entries.
+
+# Figure 2
+name: "Figure 2a"
+location: Data from Figure 2 (left) of publication
+description: Distribution of MT2(ll) in simulation after preselection and requiring MT2ll>100 GeV.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [MT2ll]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, transverse mass, dilepton, SUSY]}
+data_file: Fig2a.yaml
+---
+name: "Figure 2b"
+location: Data from Figure 2 (center) of publication
+description: Distribution of MT2(blbl) in simulation after preselection and requiring MT2ll>100 GeV.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [MT2blbl]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, transverse mass, dilepton, SUSY]}
+data_file: Fig2b.yaml
+---
+name: "Figure 2c"
+location: Data from Figure 2 (right) of publication
+description: Distribution of pT(miss) in simulation after preselection and requiring MT2ll>100 GeV.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [pTmiss]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, missing transverse momentum, dilepton, SUSY]}
+data_file: Fig2c.yaml
+---
+# Figure 3
+name: "Figure 3a"
+location: Data from Figure 3 (upper) of publication
+description: Distribution of MT2(ll) in a control region enriched in ttbar events defined by requiring at least 2 jets, at least one of them b-tagged, and missing transverse momentum below 80 GeV.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [MT2ll]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, transverse mass, dilepton, SUSY]}
+data_file: Fig3a.yaml
+---
+# Figure 4
+name: "Figure 4a"
+location: Data from Figure 4 (upper) of publication
+description: Expected and observed yields in the five ttZ control regions, which are defined by different requirements on the number of reconstructed jets and b jets, before the fit.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [1]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig4a.yaml
+---
+name: "Figure 4b"
+location: Data from Figure 4 (lower) of publication
+description: Expected and observed yields in the five ttZ control regions, which are defined by different requirements on the number of reconstructed jets and b jets, after the fit.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [1]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig4b.yaml
+---
+# Figure 4
+name: "Figure 5a"
+location: Data from Figure 5 (left) of publication
+description: Distribution of MT2(ll) of SF events falling within in the Z boson mass window with at least two jets and no b jet, pTmiss > 80 GeV and MT2(ll) > 100GeV.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [MT2ll]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig5a.yaml
+---
+name: "Figure 5b"
+location: Data from Figure 5 (center) of publication
+description: Distribution of MT2(blbl) of SF events falling within in the Z boson mass window with at least two jets and no b jet, pTmiss > 80 GeV and MT2(ll) > 100GeV.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [MT2blbl]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig5b.yaml
+---
+name: "Figure 5c"
+location: Data from Figure 5 (right) of publication
+description: Distribution of pTmiss of SF events falling within in the Z boson mass window with at least two jets and no b jet, pTmiss > 80 GeV and MT2(ll) > 100GeV.
+keywords: # used for searching, possibly multiple values for each keyword
+  - {name: observables, values: [pTmiss]}
+  - {name: cmenergies, values: [13000.0]}
+  - {name: phrases, values: [Top squark, Dark Matter, ttZ, dilepton, SUSY]}
+data_file: Fig5c.yaml
+
+# This is Table 2.

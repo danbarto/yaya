@@ -1,0 +1,74 @@
+
+independent_variables:
+- header: {name: MT2ll, units: GeV}
+  values:
+  - {low: 100.0, high: 120.0}
+  - {low: 120.0, high: 140.0}
+  - {low: 140.0, high: 160.0}
+  - {low: 160.0, high: 180.0}
+  - {low: 180.0, high: 200.0}
+  - {low: 200.0, high: 220.0}
+  - {low: 220.0, high: 240.0}
+  - {low: 240.0, high: 260.0}
+  - {low: 260.0, high: 280.0}
+  - {low: 280.0, high: 300.0}
+  - {low: 300.0, high: 320.0}
+  - {low: 320.0, high: 340.0}
+  - {low: 340.0, high: 360.0}
+  - {low: 360.0, high: 380.0}
+  - {low: 380.0, high: 400.0}
+
+dependent_variables:
+- header: {name: Total Background, units: count}
+  values:
+  - value: 411.96
+  - value: 25.11
+  - value: 5.05
+  - value: 2.51
+  - value: 1.13
+  - value: 0.80
+  - value: 0.50
+  - value: 0.31
+  - value: 0.05
+  - value: 0.19
+  - value: 0.10
+  - value: 0.01
+  - value: 0.01
+  - value: 0.02
+  - value: 0.21
+
+- header: {name: 'T2tt (750,1)', units: count}
+  values:
+  - value: 0.41
+  - value: 0.83
+  - value: 0.74
+  - value: 0.59
+  - value: 1.13
+  - value: 0.63
+  - value: 0.20
+  - value: 0.45
+  - value: 0.23
+  - value: 0.23
+  - value: 0.15
+  - value: 0.14
+  - value: 0.07
+  - value: 0.00
+  - value: 0.61
+
+- header: {name: 'T2tt(600,300)', units: count}
+  values:
+  - value: 3.77
+  - value: 3.30
+  - value: 1.81
+  - value: 1.94
+  - value: 1.67
+  - value: 0.68
+  - value: 0.21
+  - value: 0.08
+  - value: 0.00
+  - value: 0.00
+  - value: 0.00
+  - value: 0.00
+  - value: 0.00
+  - value: 0.00
+  - value: 0.00

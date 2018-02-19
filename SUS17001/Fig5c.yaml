@@ -1,0 +1,51 @@
+
+independent_variables:
+- header: {name: pTmiss, units: GeV}
+  values:
+  - {low: 80.0, high: 130.0}
+  - {low: 130.0, high: 180.0}
+  - {low: 180.0, high: 230.0}
+  - {low: 230.0, high: 280.0}
+  - {low: 280.0, high: 320.0}
+  - {low: 320.0, high: 420.0}
+  - {low: 420.0, high: 520.0}
+  - {low: 520.0, high: 800.0}
+
+dependent_variables:
+- header: {name: Total Background, units: count}
+  values:
+  - value: 665.36
+    errors:
+    - {symerror: 181.37, label: total}
+  - value: 155.37
+    errors:
+    - {symerror: 18.07, label: total}
+  - value: 56.71
+    errors:
+    - {symerror: 7.50, label: total}
+  - value: 28.05
+    errors:
+    - {symerror: 3.45, label: total}
+  - value: 13.78
+    errors:
+    - {symerror: 1.82, label: total}
+  - value: 13.97
+    errors:
+    - {symerror: 1.79, label: total}
+  - value: 5.47
+    errors:
+    - {symerror: 1.02, label: total}
+  - value: 4.11
+    errors:
+    - {symerror: 0.96, label: total}
+
+- header: {name: Data, units: count}
+  values:
+  - value: 682.00
+  - value: 156.00
+  - value: 75.00
+  - value: 27.00
+  - value: 6.00
+  - value: 14.00
+  - value: 4.00
+  - value: 2.00

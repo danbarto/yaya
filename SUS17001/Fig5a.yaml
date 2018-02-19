@@ -1,0 +1,41 @@
+
+independent_variables:
+- header: {name: MT2ll, units: GeV}
+  values:
+  - {low: 100.0, high: 140.0}
+  - {low: 140.0, high: 180.0}
+  - {low: 180.0, high: 220.0}
+  - {low: 220.0, high: 260.0}
+  - {low: 260.0, high: 300.0}
+  - {low: 300.0, high: 340.0}
+
+dependent_variables:
+- header: {name: Total Background, units: count}
+  values:
+  - value: 636.05
+    errors:
+    - {symerror: 163.35, label: total}
+  - value: 187.23
+    errors:
+    - {symerror: 30.86, label: total}
+  - value: 62.39
+    errors:
+    - {symerror: 9.28, label: total}
+  - value: 28.22
+    errors:
+    - {symerror: 3.56, label: total}
+  - value: 12.89
+    errors:
+    - {symerror: 2.60, label: total}
+  - value: 16.05
+    errors:
+    - {symerror: 2.41, label: total}
+
+- header: {name: Data, units: count}
+  values:
+  - value: 654.00
+  - value: 188.00
+  - value: 76.00
+  - value: 26.00
+  - value: 12.00
+  - value: 10.00
