@@ -13,8 +13,10 @@ class read1DHist:
         self.errors     = False
         if is2D: self.z_title    = hist.GetZaxis().GetTitle()
 
+        self.getTable()
+
     def getBins(self, axis):
-        return [ (axis.GetBinLowEdge(i+1), axis.GetBinUpEdge(i+1)) for i in range(axis.GetNbins()) ]
+        return [ (round(axis.GetBinLowEdge(i+1),2), round(axis.GetBinUpEdge(i+1),2)) for i in range(axis.GetNbins()) ]
 
     def getContent(self):
         self.content = []
@@ -27,25 +29,33 @@ class read1DHist:
         s = '\nindependent_variables:\n- header: {name: %s, units: %s}\n  values:'%(name, units)
         for x in self.x_bins:
             #print x
-            s += "\n  {low: %s, high: %s}"%x
+            s += "\n  - {low: %s, high: %s}"%x
         print s
 
-    def getDependent(self, name="process", units="1"):
+    def getDependent(self, name=False, units="1"):
+        name = name if name else self.name
         s = '- header: {name: %s, units: %s}\n  values:'%(name, units)
         for i,y in enumerate(self.content):#sorted(self.content.keys()):
-            s += '\n  - value: %s'%y
+            s += '\n  - value: %.2f'%y
             if self.errors:
                 s += '\n    errors:'
                 if type(self.errors[i]) == type(1.):
-                    s += '\n    - {symerror: %s, label: total}'%self.errors[i]
+                    s += '\n    - {symerror: %.2f, label: total}'%self.errors[i]
                 else:
-                    s += '\n    - {asymerror: {plus: %s, minus: -%s}, label: total}'%self.errors[i]
+                    s += '\n    - {asymerror: {plus: %.2f, minus: -%.2f}, label: total}'%self.errors[i]
         print s
 
     def getTable(self):
         self.x_bins     = self.getBins(self.x_axis)
         #self.y_bins     = self.getBins(self.y_axis)
         self.getContent()
+
+    def subtractHist(self, otherHist):
+        for i in range(self.x_axis.GetNbins()):
+            self.content[i] -= otherHist.content[i]
+    #def mergeHists(self, listOfHists):
+    #    for h in listOfHists:
+    #        hist =
 
     def mergeBoxes(self, listOfBoxes):
         self.errors = []
@@ -57,7 +67,6 @@ class read1DHist:
                 #print low>high
                 #low, high = (b.GetY1(), b.GetY2() if b.GetY1() > b.GetY2() else b.GetY2(), b.GetY1())
                 low, high = abs(self.content[i] - low), abs(self.content[i]- high)
-                low = low*1.2
                 symmetric = False
                 if (low-high)/low < 0.01: symmetric = True
                 if symmetric:

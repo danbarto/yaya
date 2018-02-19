@@ -16,6 +16,8 @@ class rootReader:
         self.boxes      = []
         self.errors     = []
 
+        self.walk()
+
     def open(self):
         self.rootFile = ROOT.TFile(self.file)
 
@@ -57,7 +59,17 @@ class rootReader:
                 continue
 
     def walk(self):
+        print "\nOpening file %s"%self.file
         self.open()
+        print "Searching for ROOT objects in file."
         firstCanvas = self.getObjects()
         self.getFromCanvas(firstCanvas)
         self.close()
+        print "Done."
+
+        for className in ["graphs", "hist2D", "hist1D", "boxes", "errors"]:
+            collection = getattr(self, className)
+            if len(collection)>0:
+                print "\nFound the %s members of class %s:"%(len(collection),className)
+                for c in collection:
+                    print c.GetName()
