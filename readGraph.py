@@ -1,6 +1,8 @@
 '''
-
+Class for reading root TGraphs
 '''
+import ROOT
+
 
 class readGraph:
     def __init__(self, hist, is2D=False):
